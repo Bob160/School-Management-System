@@ -33,6 +33,7 @@ public class TeacherServiceImpl implements TeacherService {
         newTeacher.setClassesAssigned(teacher.getClassesAssigned());
         newTeacher.setSubjectsTaught(teacher.getSubjectsTaught());
         newTeacher.setGender(teacher.getGender());
+        newTeacher.setAddress(teacher.getAddress());
         teacherRepository.save(newTeacher);
         return newTeacher;
     }
@@ -50,8 +51,11 @@ public class TeacherServiceImpl implements TeacherService {
             updatedTeacher.setLastName(teacher.getLastName());
             updatedTeacher.setDepartment(teacher.getDepartment());
             updatedTeacher.setEmail(teacher.getEmail());
-            updatedTeacher.setDob(teacher.getDob());
-
+            updatedTeacher.setDateOfBirth(teacher.getDateOfBirth());
+            updatedTeacher.setGender(teacher.getGender());
+            updatedTeacher.setSubjectsTaught(teacher.getSubjectsTaught());
+            updatedTeacher.setClassesAssigned(teacher.getClassesAssigned());
+            updatedTeacher.setAddress(teacher.getAddress());
         }
         return teacherRepository.save(updatedTeacher);
     }
