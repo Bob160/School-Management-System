@@ -3,10 +3,8 @@ package com.bobrox.demo.request;
 import com.bobrox.demo.Gender;
 import com.bobrox.demo.model.Parent;
 import com.bobrox.demo.model.SchoolClass;
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.hibernate.annotations.NaturalId;
 
 import java.time.LocalDate;
 

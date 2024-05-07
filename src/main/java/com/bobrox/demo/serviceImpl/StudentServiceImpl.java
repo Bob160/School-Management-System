@@ -27,6 +27,10 @@ public class StudentServiceImpl implements StudentService {
         newStudent.setEmail(studentRequest.getEmail());
         newStudent.setLastName(studentRequest.getLastName());
         newStudent.setFirstName(studentRequest.getFirstName());
+        newStudent.setGender(studentRequest.getGender());
+        newStudent.setParent(studentRequest.getParent());
+        newStudent.setDateOfBirth(studentRequest.getDateOfBirth());
+        newStudent.setSchoolClass(studentRequest.getSchoolClass());
         return studentRepository.save(newStudent);
     }
 
@@ -45,6 +49,10 @@ public class StudentServiceImpl implements StudentService {
             st.setLastName(student.getLastName());
             st.setEmail(student.getEmail());
             st.setAddress(student.getAddress());
+            st.setSchoolClass(student.getSchoolClass());
+            st.setDateOfBirth(student.getDateOfBirth());
+            st.setParent(student.getParent());
+            st.setGender(student.getGender());
             return studentRepository.save(st);
 
         }).orElseThrow(() -> new StudentNotFoundException("sorry, student with id " + student.getId() + " could not be found!"));
