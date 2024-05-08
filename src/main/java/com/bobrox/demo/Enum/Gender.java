@@ -1,9 +1,10 @@
-package com.bobrox.demo;
+package com.bobrox.demo.Enum;
 
 import lombok.Getter;
 
 @Getter
 public enum Gender {
+
     MALE ("1"), FEMALE ("2");
 
     Gender(String gender) {
@@ -16,5 +17,4 @@ public enum Gender {
     public String value() {
         return gender;
     }
-
 }

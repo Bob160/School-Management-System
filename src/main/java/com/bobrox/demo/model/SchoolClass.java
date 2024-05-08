@@ -17,12 +17,13 @@ public class SchoolClass {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "name", columnDefinition = "VARCHAR(255)")
     private String name;
 
     @OneToMany(mappedBy = "schoolClass")
     private List<Student> students;
     @OneToMany(mappedBy = "schoolClass")
-    private List<Subject> subjects;
+    private List<SubjectTaught> subjectsTaught;
     @ManyToMany
     @JoinTable(
             name = "class_teacher",
