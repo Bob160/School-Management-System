@@ -1,6 +1,5 @@
 package com.bobrox.demo.model;
 
-import com.bobrox.demo.Gender;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

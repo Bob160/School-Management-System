@@ -31,6 +31,8 @@ public class StudentServiceImpl implements StudentService {
         newStudent.setParent(studentRequest.getParent());
         newStudent.setDateOfBirth(studentRequest.getDateOfBirth());
         newStudent.setSchoolClass(studentRequest.getSchoolClass());
+
+
         return studentRepository.save(newStudent);
     }
 

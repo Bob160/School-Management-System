@@ -1,11 +1,12 @@
 package com.bobrox.demo.request;
 
 
-import com.bobrox.demo.Gender;
+import com.bobrox.demo.Enum.Gender;
 import com.bobrox.demo.model.SchoolClass;
+import com.bobrox.demo.model.SubjectTaught;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import javax.security.auth.Subject;
+
 import java.time.LocalDate;
 import java.util.List;
 
@@ -19,6 +20,6 @@ public class AddTeacherRequest {
     private String department;
     private Gender gender;
     private String address;
-    private List<Subject> subjectsTaught;
+    private List<SubjectTaught> subjectsTaught;
     private List<SchoolClass> classesAssigned;
 }
